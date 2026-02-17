@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS AI - Multi-Agent Platform</title>
+    <meta name="description" content="Production-grade multi-agent orchestration system integrating 10 agentic AI frameworks with hybrid LLM routing, advanced memory systems, and enterprise-ready infrastructure.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Three.js Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand">
+                <span class="brand-accent">NEXUS</span> AI
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="#architecture" data-i18n="nav_architecture">Architecture</a>
+                <a href="#frameworks" data-i18n="nav_frameworks">Frameworks</a>
+                <a href="#tools" data-i18n="nav_tools">AI Tools</a>
+                <a href="#features" data-i18n="nav_features">Features</a>
+                <a href="#techstack" data-i18n="nav_techstack">Tech Stack</a>
+                <a href="#status" data-i18n="nav_status">Status</a>
+                <a href="#stats" data-i18n="nav_stats">Statistics</a>
+            </div>
+            <div class="lang-toggle">
+                <button class="lang-btn active" data-lang="ko">KR</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge" data-i18n="hero_badge">v2.1.0 Production-Ready</div>
+                <h1 class="hero-title">
+                    <span class="title-gradient" data-i18n="hero_title_1">Multi-Agent</span><br>
+                    <span data-i18n="hero_title_2">AI Platform</span>
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">
+                    10개의 Agentic AI 프레임워크를 통합한 프로덕션급 멀티 에이전트 오케스트레이션 시스템. 하이브리드 LLM 라우팅, 고급 메모리 시스템, 엔터프라이즈급 인프라를 제공합니다.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#architecture" class="btn btn-primary" data-i18n="hero_btn_explore">아키텍처 탐색</a>
+                    <a href="#frameworks" class="btn btn-outline" data-i18n="hero_btn_frameworks">프레임워크 보기</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="10">0</span>
+                        <span class="stat-label" data-i18n="stat_frameworks">AI 프레임워크</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="110">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label" data-i18n="stat_tools">AI 도구</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="204">0</span>
+                        <span class="stat-label" data-i18n="stat_endpoints">API 엔드포인트</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="56000">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label" data-i18n="stat_loc">코드 라인</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="40">0</span>
+                        <span class="stat-label" data-i18n="stat_pages">대시보드 페이지</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="6">0</span><span class="stat-slash">/6</span>
+                        <span class="stat-label" data-i18n="stat_phases">완료된 단계</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="arch-mini">
+                    <div class="arch-mini-layer" style="--layer-color: var(--clr-cyan);">
+                        <span>Frontend</span>
+                        <small>Next.js 14 + React Three Fiber</small>
+                    </div>
+                    <div class="arch-mini-layer" style="--layer-color: var(--clr-green);">
+                        <span>API Gateway</span>
+                        <small>FastAPI + JWT + CORS</small>
+                    </div>
+                    <div class="arch-mini-layer" style="--layer-color: var(--clr-purple);">
+                        <span>Agent Engine</span>
+                        <small>10 Framework Adapters</small>
+                    </div>
+                    <div class="arch-mini-layer" style="--layer-color: var(--clr-pink);">
+                        <span>AI Tools</span>
+                        <small>110+ Production Tools</small>
+                    </div>
+                    <div class="arch-mini-layer" style="--layer-color: var(--clr-amber);">
+                        <span>Memory System</span>
+                        <small>Redis + PostgreSQL + pgvector</small>
+                    </div>
+                    <div class="arch-mini-layer" style="--layer-color: var(--clr-cyan);">
+                        <span>Infrastructure</span>
+                        <small>K8s + Docker + CI/CD</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span data-i18n="scroll_down">아래로 스크롤</span>
+            <div class="scroll-arrow">&#8595;</div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="section" id="architecture">
+        <div class="container">
+            <h2 class="section-title" data-i18n="arch_title">시스템 아키텍처</h2>
+            <p class="section-desc" data-i18n="arch_desc">6개의 레이어로 구성된 프로덕션급 멀티 에이전트 플랫폼</p>
+            <div class="arch-diagram">
+                <div class="arch-row fade-in" style="--row-color: var(--clr-cyan);">
+                    <div class="arch-label">L6</div>
+                    <div class="arch-name" data-i18n="arch_l6">프론트엔드</div>
+                    <div class="arch-items">
+                        <span class="arch-chip">Next.js 14</span>
+                        <span class="arch-chip">React Three Fiber</span>
+                        <span class="arch-chip">Zustand</span>
+                        <span class="arch-chip">TanStack Query</span>
+                        <span class="arch-chip">Framer Motion</span>
+                        <span class="arch-chip">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="arch-row fade-in" style="--row-color: var(--clr-green);">
+                    <div class="arch-label">L5</div>
+                    <div class="arch-name" data-i18n="arch_l5">API 게이트웨이</div>
+                    <div class="arch-items">
+                        <span class="arch-chip">FastAPI</span>
+                        <span class="arch-chip">32 Routers</span>
+                        <span class="arch-chip">JWT Auth</span>
+                        <span class="arch-chip">OAuth2</span>
+                        <span class="arch-chip">Rate Limiting</span>
+                        <span class="arch-chip">SSE Streaming</span>
+                    </div>
+                </div>
+                <div class="arch-row fade-in" style="--row-color: var(--clr-purple);">
+                    <div class="arch-label">L4</div>
+                    <div class="arch-name" data-i18n="arch_l4">멀티 에이전트 엔진</div>
+                    <div class="arch-items">
+                        <span class="arch-chip">Agent Factory</span>
+                        <span class="arch-chip">LLM Router</span>
+                        <span class="arch-chip">10 Adapters</span>
+                        <span class="arch-chip">Cowork System</span>
+                        <span class="arch-chip">Moltbot Dialog</span>
+                    </div>
+                </div>
+                <div class="arch-row fade-in" style="--row-color: var(--clr-pink);">
+                    <div class="arch-label">L3</div>
+                    <div class="arch-name" data-i18n="arch_l3">AI 도구 라이브러리</div>
+                    <div class="arch-items">
+                        <span class="arch-chip">Document (25)</span>
+                        <span class="arch-chip">Code (12)</span>
+                        <span class="arch-chip">Web (17)</span>
+                        <span class="arch-chip">Data (20)</span>
+                        <span class="arch-chip">Media (36)</span>
+                    </div>
+                </div>
+                <div class="arch-row fade-in" style="--row-color: var(--clr-amber);">
+                    <div class="arch-label">L2</div>
+                    <div class="arch-name" data-i18n="arch_l2">메모리 시스템</div>
+                    <div class="arch-items">
+                        <span class="arch-chip">Redis Short-term</span>
+                        <span class="arch-chip">PostgreSQL Long-term</span>
+                        <span class="arch-chip">pgvector Semantic</span>
+                        <span class="arch-chip">Memory Promotion</span>
+                    </div>
+                </div>
+                <div class="arch-row fade-in" style="--row-color: var(--clr-green);">
+                    <div class="arch-label">L1</div>
+                    <div class="arch-name" data-i18n="arch_l1">인프라스트럭처</div>
+                    <div class="arch-items">
+                        <span class="arch-chip">Docker</span>
+                        <span class="arch-chip">Kubernetes</span>
+                        <span class="arch-chip">CI/CD</span>
+                        <span class="arch-chip">Prometheus</span>
+                        <span class="arch-chip">Grafana</span>
+                        <span class="arch-chip">Loki</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frameworks Section -->
+    <section class="section section-alt" id="frameworks">
+        <div class="container">
+            <h2 class="section-title" data-i18n="fw_title">10 Agentic AI 프레임워크</h2>
+            <p class="section-desc" data-i18n="fw_desc">FrameworkAdapter 패턴으로 통합된 차세대 멀티 에이전트 프레임워크</p>
+            <div class="framework-grid">
+                <div class="fw-card fade-in" style="--fw-color: var(--clr-cyan);">
+                    <div class="fw-icon">&#9881;</div>
+                    <h4>CrewAI</h4>
+                    <p data-i18n="fw_crewai">역할 기반 멀티 에이전트 크루, Sequential/Hierarchical 실행</p>
+                    <div class="fw-tag">Multi-Agent Crews</div>
+                </div>
+                <div class="fw-card fade-in" style="--fw-color: var(--clr-purple);">
+                    <div class="fw-icon">&#9670;</div>
+                    <h4>LangGraph</h4>
+                    <p data-i18n="fw_langgraph">StateGraph 기반 에이전트, Anthropic/OpenAI 메시지 패싱</p>
+                    <div class="fw-tag">StateGraph Agent</div>
+                </div>
+                <div class="fw-card fade-in" style="--fw-color: var(--clr-green);">
+                    <div class="fw-icon">&#9733;</div>
+                    <h4>AutoGen</h4>
+                    <p data-i18n="fw_autogen">RoundRobinGroupChat, 종료 조건 기반 멀티 에이전트 (Microsoft)</p>
+                    <div class="fw-tag">Group Chat</div>
+                </div>
+                <div class="fw-card fade-in" style="--fw-color: var(--clr-amber);">
+                    <div class="fw-icon">&#9830;</div>
+                    <h4>Google ADK</h4>
+                    <p data-i18n="fw_google_adk">Gemini 2.0 Flash, 비동기 이벤트 스트리밍</p>
+                    <div class="fw-tag">Gemini Agent</div>
+                </div>
+                <div class="fw-card fade-in" style="--fw-color: var(--clr-pink);">
+                    <div class="fw-icon">&#9679;</div>
+                    <h4>OpenAI Agents</h4>
+                    <p data-i18n="fw_openai">Agent + Runner 패턴, 가드레일 기반 실행</p>
+                    <div class="fw-tag">Agent + Runner</div>
+                </div>
+                <div class="fw-card fade-in" style="--fw-color: var(--clr-cyan);">
+                    <div class="fw-icon">&#9672;</div>
+                    <h4>Claude Agent</h4>
+                    <p data-i18n="fw_claude">Anthropic tool_use 에이전틱 루프 (최대 5 이터레이션)</p>
+                    <div class="fw-tag">Tool Use Loop</div>
+                </div>
+                <div class="fw-card fade-in" style="--fw-color: var(--clr-purple);">
+                    <div class="fw-icon">&#9670;</div>
+                    <h4>DSPy</h4>
+                    <p data-i18n="fw_dspy">ChainOfThought 모듈, 자동 프롬프트 최적화 (Stanford)</p>
+                    <div class="fw-tag">Prompt Optimization</div>
+                </div>
+                <div class="fw-card fade-in" style="--fw-color: var(--clr-green);">
+                    <div class="fw-icon">&#9733;</div>
+                    <h4>MetaGPT</h4>
+                    <p data-i18n="fw_metagpt">Role/Action SOP 패턴, 소프트웨어 개발 자동화</p>
+                    <div class="fw-tag">SOP Pattern</div>
+                </div>
+                <div class="fw-card fade-in" style="--fw-color: var(--clr-pink);">
+                    <div class="fw-icon">&#9829;</div>
+                    <h4>CAMEL-AI</h4>
+                    <p data-i18n="fw_camel">ChatAgent + ModelFactory, 역할극 협업 시스템</p>
+                    <div class="fw-tag">Role-Play</div>
+                </div>
+                <div class="fw-card fade-in" style="--fw-color: var(--clr-amber);">
+                    <div class="fw-icon">&#9830;</div>
+                    <h4>LlamaIndex</h4>
+                    <p data-i18n="fw_llamaindex">AgentWorkflow + FunctionAgent, 듀얼 LLM 백엔드</p>
+                    <div class="fw-tag">RAG + Agent</div>
+                </div>
+            </div>
+            <div class="fw-features">
+                <div class="fw-feature-card fade-in">
+                    <h5 data-i18n="fw_feat_registry">Adapter Registry</h5>
+                    <p data-i18n="fw_feat_registry_desc">Lazy-loaded 디스커버리, get_adapter(), list_frameworks()</p>
+                </div>
+                <div class="fw-feature-card fade-in">
+                    <h5 data-i18n="fw_feat_fallback">Smart Fallback</h5>
+                    <p data-i18n="fw_feat_fallback_desc">사용 불가 프레임워크 자동 Direct LLM 실행 전환</p>
+                </div>
+                <div class="fw-feature-card fade-in">
+                    <h5 data-i18n="fw_feat_frontend">Frontend Integration</h5>
+                    <p data-i18n="fw_feat_frontend_desc">AgentBuilder 프레임워크 셀렉터 + i18n (en/ko)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Tools Section -->
+    <section class="section" id="tools">
+        <div class="container">
+            <h2 class="section-title" data-i18n="tools_title">110+ AI 도구 라이브러리</h2>
+            <p class="section-desc" data-i18n="tools_desc">5개 카테고리에 걸친 프로덕션급 AI 도구</p>
+            <div class="tools-grid">
+                <div class="tool-card fade-in" style="--tool-color: var(--clr-cyan);">
+                    <div class="tool-header">
+                        <div class="tool-icon">&#128196;</div>
+                        <div class="tool-count">25</div>
+                    </div>
+                    <h4 data-i18n="tool_doc">문서 처리</h4>
+                    <ul>
+                        <li>PDF Reader (암호화 지원)</li>
+                        <li>DOCX / XLSX / PPTX</li>
+                        <li>OCR (Tesseract/EasyOCR)</li>
+                        <li data-i18n="tool_doc_converter">문서 변환기</li>
+                        <li data-i18n="tool_doc_metadata">메타데이터 추출</li>
+                    </ul>
+                </div>
+                <div class="tool-card fade-in" style="--tool-color: var(--clr-green);">
+                    <div class="tool-header">
+                        <div class="tool-icon">&#128187;</div>
+                        <div class="tool-count">12</div>
+                    </div>
+                    <h4 data-i18n="tool_code">코드 실행</h4>
+                    <ul>
+                        <li>Python (Docker Sandbox)</li>
+                        <li>JavaScript / Node.js</li>
+                        <li>Bash (안전 검증)</li>
+                        <li data-i18n="tool_code_analyzer">코드 분석기</li>
+                        <li>Git Operations</li>
+                    </ul>
+                </div>
+                <div class="tool-card fade-in" style="--tool-color: var(--clr-purple);">
+                    <div class="tool-header">
+                        <div class="tool-icon">&#127760;</div>
+                        <div class="tool-count">17</div>
+                    </div>
+                    <h4 data-i18n="tool_web">웹 도구</h4>
+                    <ul>
+                        <li>Web Scraper (Playwright)</li>
+                        <li>Web Search</li>
+                        <li>API Client (REST/GraphQL)</li>
+                        <li data-i18n="tool_web_screenshot">스크린샷 도구</li>
+                        <li>URL Parser</li>
+                    </ul>
+                </div>
+                <div class="tool-card fade-in" style="--tool-color: var(--clr-amber);">
+                    <div class="tool-header">
+                        <div class="tool-icon">&#128202;</div>
+                        <div class="tool-count">20</div>
+                    </div>
+                    <h4 data-i18n="tool_data">데이터 분석</h4>
+                    <ul>
+                        <li>pandas Analyzer</li>
+                        <li data-i18n="tool_data_viz">시각화 (7종 차트)</li>
+                        <li data-i18n="tool_data_stats">통계 분석</li>
+                        <li data-i18n="tool_data_transform">데이터 변환</li>
+                        <li>CSV/Excel/JSON/Parquet</li>
+                    </ul>
+                </div>
+                <div class="tool-card fade-in" style="--tool-color: var(--clr-pink);">
+                    <div class="tool-header">
+                        <div class="tool-icon">&#127909;</div>
+                        <div class="tool-count">36</div>
+                    </div>
+                    <h4 data-i18n="tool_media">미디어 처리</h4>
+                    <ul>
+                        <li data-i18n="tool_media_image">이미지 처리 (Pillow)</li>
+                        <li data-i18n="tool_media_video">비디오 처리 (FFmpeg)</li>
+                        <li data-i18n="tool_media_audio">오디오 처리</li>
+                        <li>TTS / STT (Whisper)</li>
+                        <li data-i18n="tool_media_format">30+ 포맷 지원</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tools-security fade-in">
+                <h4 data-i18n="tools_security_title">보안 기능</h4>
+                <div class="security-badges">
+                    <span class="badge badge-green" data-i18n="badge_docker">Docker 샌드박스 격리</span>
+                    <span class="badge badge-cyan" data-i18n="badge_resource">메모리/CPU 제한</span>
+                    <span class="badge badge-purple" data-i18n="badge_network">네트워크 비활성화</span>
+                    <span class="badge badge-pink" data-i18n="badge_command">위험 명령 차단</span>
+                    <span class="badge badge-amber" data-i18n="badge_whitelist">명령어 화이트리스트</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section section-alt" id="features">
+        <div class="container">
+            <h2 class="section-title" data-i18n="feat_title">핵심 기능</h2>
+            <p class="section-desc" data-i18n="feat_desc">엔터프라이즈급 AI 플랫폼의 주요 기능</p>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon" style="--feat-color: var(--clr-purple);">&#129302;</div>
+                    <h4 data-i18n="feat_hybrid_llm">하이브리드 LLM 라우팅</h4>
+                    <p data-i18n="feat_hybrid_llm_desc">민감 데이터 감지 시 로컬 LLM 자동 전환, 한국어 감지 시 EXAONE, 작업 복잡도 기반 라우팅</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon" style="--feat-color: var(--clr-cyan);">&#129504;</div>
+                    <h4 data-i18n="feat_memory">3-Layer 메모리 시스템</h4>
+                    <p data-i18n="feat_memory_desc">Redis 단기 기억 (24h TTL), PostgreSQL+pgvector 장기 기억, 시맨틱 검색 및 자동 승격</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon" style="--feat-color: var(--clr-green);">&#128274;</div>
+                    <h4 data-i18n="feat_security">엔터프라이즈 보안</h4>
+                    <p data-i18n="feat_security_desc">JWT 인증, OAuth2 (Google, GitHub, Kakao, Naver), Docker 샌드박스, 명령 안전 검증</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon" style="--feat-color: var(--clr-pink);">&#127908;</div>
+                    <h4 data-i18n="feat_voice">음성 인터페이스</h4>
+                    <p data-i18n="feat_voice_desc">OpenAI Whisper STT, 6종 음성 TTS, 12개 언어 번역 지원</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon" style="--feat-color: var(--clr-amber);">&#127912;</div>
+                    <h4 data-i18n="feat_multimodal">멀티모달 AI</h4>
+                    <p data-i18n="feat_multimodal_desc">Claude Vision API 이미지 분석, 비디오/오디오 처리 및 트랜스크립션</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon" style="--feat-color: var(--clr-purple);">&#129513;</div>
+                    <h4 data-i18n="feat_plugin">플러그인 시스템</h4>
+                    <p data-i18n="feat_plugin_desc">동적 플러그인 로딩, 서드파티 마켓플레이스, 플러그인 실행 및 관리</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon" style="--feat-color: var(--clr-green);">&#128200;</div>
+                    <h4 data-i18n="feat_analytics">고급 분석</h4>
+                    <p data-i18n="feat_analytics_desc">사용량 추적, 기능 분석, 실시간 메트릭 대시보드, 성장 지표</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon" style="--feat-color: var(--clr-cyan);">&#127970;</div>
+                    <h4 data-i18n="feat_whitelabel">화이트라벨 솔루션</h4>
+                    <p data-i18n="feat_whitelabel_desc">커스텀 브랜딩/테마, 커스텀 도메인, 멀티테넌트 배포</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon" style="--feat-color: var(--clr-pink);">&#129309;</div>
+                    <h4 data-i18n="feat_collab">협업 에이전트</h4>
+                    <p data-i18n="feat_collab_desc">멀티 에이전트 워크플로, 역할 기반 조율, 병렬 실행, 종속성 관리</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon" style="--feat-color: var(--clr-amber);">&#128260;</div>
+                    <h4 data-i18n="feat_autonomous">자율 워크플로</h4>
+                    <p data-i18n="feat_autonomous_desc">자가 개선 에이전트, 실행 이력 학습, 자동 워크플로 최적화</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon" style="--feat-color: var(--clr-purple);">&#127891;</div>
+                    <h4 data-i18n="feat_finetune">파인튜닝 파이프라인</h4>
+                    <p data-i18n="feat_finetune_desc">커스텀 모델 학습, 데이터셋 관리, 학습 모니터링, 모델 배포</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon" style="--feat-color: var(--clr-green);">&#127760;</div>
+                    <h4 data-i18n="feat_i18n">국제화 (i18n)</h4>
+                    <p data-i18n="feat_i18n_desc">40개 대시보드 페이지 en/ko 완전 지원, 로케일당 1,594개 번역 키</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Modules Section -->
+    <section class="section" id="advanced">
+        <div class="container">
+            <h2 class="section-title" data-i18n="adv_title">고급 모듈</h2>
+            <p class="section-desc" data-i18n="adv_desc">Moltbot 대화 관리 + 향상된 Cowork 실행 시스템</p>
+            <div class="advanced-grid">
+                <div class="adv-card adv-card-wide fade-in" style="--adv-color: var(--clr-cyan);">
+                    <h4 data-i18n="adv_moltbot">Moltbot 대화 관리</h4>
+                    <div class="adv-features">
+                        <div class="adv-feature-item">
+                            <span class="adv-dot" style="background: var(--clr-cyan);"></span>
+                            <span data-i18n="adv_moltbot_intent">의도 분류 (12+ 내장 인텐트)</span>
+                        </div>
+                        <div class="adv-feature-item">
+                            <span class="adv-dot" style="background: var(--clr-purple);"></span>
+                            <span data-i18n="adv_moltbot_entity">엔티티 추출 (인물, 날짜, 이메일, URL 등)</span>
+                        </div>
+                        <div class="adv-feature-item">
+                            <span class="adv-dot" style="background: var(--clr-pink);"></span>
+                            <span data-i18n="adv_moltbot_sentiment">감성 분석 및 감정 감지</span>
+                        </div>
+                        <div class="adv-feature-item">
+                            <span class="adv-dot" style="background: var(--clr-green);"></span>
+                            <span data-i18n="adv_moltbot_context">멀티턴 컨텍스트 추적 (Redis 기반)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="adv-card adv-card-wide fade-in" style="--adv-color: var(--clr-purple);">
+                    <h4 data-i18n="adv_cowork">Enhanced Cowork 실행</h4>
+                    <div class="adv-features">
+                        <div class="adv-feature-item">
+                            <span class="adv-dot" style="background: var(--clr-purple);"></span>
+                            <span data-i18n="adv_cowork_plan">LLM 기반 지능형 작업 플래닝</span>
+                        </div>
+                        <div class="adv-feature-item">
+                            <span class="adv-dot" style="background: var(--clr-cyan);"></span>
+                            <span data-i18n="adv_cowork_parallel">종속성 인식 병렬 실행</span>
+                        </div>
+                        <div class="adv-feature-item">
+                            <span class="adv-dot" style="background: var(--clr-amber);"></span>
+                            <span data-i18n="adv_cowork_checkpoint">멀티레벨 체크포인트 시스템</span>
+                        </div>
+                        <div class="adv-feature-item">
+                            <span class="adv-dot" style="background: var(--clr-green);"></span>
+                            <span data-i18n="adv_cowork_stream">실시간 진행 스트리밍</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MCP Integration -->
+            <div class="mcp-section fade-in">
+                <h4 data-i18n="mcp_title">MCP 통합 (Model Context Protocol)</h4>
+                <div class="mcp-grid">
+                    <div class="mcp-item">
+                        <span class="mcp-icon">&#128194;</span>
+                        <span>Google Drive</span>
+                    </div>
+                    <div class="mcp-item">
+                        <span class="mcp-icon">&#128172;</span>
+                        <span>Slack</span>
+                    </div>
+                    <div class="mcp-item">
+                        <span class="mcp-icon">&#128736;</span>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="mcp-item">
+                        <span class="mcp-icon">&#128221;</span>
+                        <span>Notion</span>
+                    </div>
+                    <div class="mcp-item">
+                        <span class="mcp-icon">&#128231;</span>
+                        <span>Gmail</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="section section-alt" id="techstack">
+        <div class="container">
+            <h2 class="section-title" data-i18n="tech_title">기술 스택</h2>
+            <p class="section-desc" data-i18n="tech_desc">최신 기술로 구축된 프로덕션급 플랫폼</p>
+            <div class="tech-grid">
+                <div class="tech-category fade-in">
+                    <h4 style="color: var(--clr-cyan);">Frontend</h4>
+                    <div class="tech-list">
+                        <div class="tech-item"><span class="tech-name">Next.js</span><span class="tech-ver">14.1</span></div>
+                        <div class="tech-item"><span class="tech-name">TypeScript</span><span class="tech-ver">5.3+</span></div>
+                        <div class="tech-item"><span class="tech-name">Tailwind CSS</span><span class="tech-ver">3.4+</span></div>
+                        <div class="tech-item"><span class="tech-name">Framer Motion</span><span class="tech-ver">11.0+</span></div>
+                        <div class="tech-item"><span class="tech-name">React Three Fiber</span><span class="tech-ver">8.15+</span></div>
+                        <div class="tech-item"><span class="tech-name">TanStack Query</span><span class="tech-ver">5.17+</span></div>
+                        <div class="tech-item"><span class="tech-name">Zustand</span><span class="tech-ver">4.5+</span></div>
+                    </div>
+                </div>
+                <div class="tech-category fade-in">
+                    <h4 style="color: var(--clr-green);">Backend</h4>
+                    <div class="tech-list">
+                        <div class="tech-item"><span class="tech-name">FastAPI</span><span class="tech-ver">0.110+</span></div>
+                        <div class="tech-item"><span class="tech-name">Python</span><span class="tech-ver">3.11+</span></div>
+                        <div class="tech-item"><span class="tech-name">SQLAlchemy</span><span class="tech-ver">2.0+</span></div>
+                        <div class="tech-item"><span class="tech-name">PostgreSQL</span><span class="tech-ver">15</span></div>
+                        <div class="tech-item"><span class="tech-name">pgvector</span><span class="tech-ver">0.2+</span></div>
+                        <div class="tech-item"><span class="tech-name">Redis</span><span class="tech-ver">7</span></div>
+                        <div class="tech-item"><span class="tech-name">Celery</span><span class="tech-ver">5.3+</span></div>
+                    </div>
+                </div>
+                <div class="tech-category fade-in">
+                    <h4 style="color: var(--clr-purple);">AI / ML</h4>
+                    <div class="tech-list">
+                        <div class="tech-item"><span class="tech-name">Anthropic SDK</span><span class="tech-ver">0.79+</span></div>
+                        <div class="tech-item"><span class="tech-name">OpenAI SDK</span><span class="tech-ver">2.21+</span></div>
+                        <div class="tech-item"><span class="tech-name">LangChain</span><span class="tech-ver">1.2+</span></div>
+                        <div class="tech-item"><span class="tech-name">CrewAI</span><span class="tech-ver">1.9+</span></div>
+                        <div class="tech-item"><span class="tech-name">LangGraph</span><span class="tech-ver">0.2+</span></div>
+                        <div class="tech-item"><span class="tech-name">Google ADK</span><span class="tech-ver">1.25+</span></div>
+                        <div class="tech-item"><span class="tech-name">DSPy</span><span class="tech-ver">3.1+</span></div>
+                    </div>
+                </div>
+                <div class="tech-category fade-in">
+                    <h4 style="color: var(--clr-amber);">Infrastructure</h4>
+                    <div class="tech-list">
+                        <div class="tech-item"><span class="tech-name">Docker</span><span class="tech-ver">24+</span></div>
+                        <div class="tech-item"><span class="tech-name">Kubernetes</span><span class="tech-ver">1.28+</span></div>
+                        <div class="tech-item"><span class="tech-name">GitHub Actions</span><span class="tech-ver">CI/CD</span></div>
+                        <div class="tech-item"><span class="tech-name">Prometheus</span><span class="tech-ver">Metrics</span></div>
+                        <div class="tech-item"><span class="tech-name">Grafana</span><span class="tech-ver">Dashboards</span></div>
+                        <div class="tech-item"><span class="tech-name">Loki</span><span class="tech-ver">Logs</span></div>
+                        <div class="tech-item"><span class="tech-name">Sentry</span><span class="tech-ver">Errors</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Status Section -->
+    <section class="section" id="status">
+        <div class="container">
+            <h2 class="section-title" data-i18n="status_title">구현 상태</h2>
+            <p class="section-desc" data-i18n="status_desc">전체 진행률: 100% (6/6 단계 완료)</p>
+            <div class="status-grid">
+                <div class="status-card fade-in" style="--status-color: var(--clr-cyan);">
+                    <div class="status-header">
+                        <span class="status-phase">Phase 0</span>
+                        <span class="status-check">&#10003;</span>
+                    </div>
+                    <h4 data-i18n="phase0">프로젝트 초기화</h4>
+                    <div class="status-bar"><div class="status-fill" style="width: 100%;"></div></div>
+                    <div class="status-meta">
+                        <span>50+ files</span>
+                        <span>~2,000 LOC</span>
+                    </div>
+                </div>
+                <div class="status-card fade-in" style="--status-color: var(--clr-purple);">
+                    <div class="status-header">
+                        <span class="status-phase">Phase 1</span>
+                        <span class="status-check">&#10003;</span>
+                    </div>
+                    <h4 data-i18n="phase1">에이전트 엔진 코어</h4>
+                    <div class="status-bar"><div class="status-fill" style="width: 100%;"></div></div>
+                    <div class="status-meta">
+                        <span>10+ files</span>
+                        <span>~7,219 LOC</span>
+                    </div>
+                </div>
+                <div class="status-card fade-in" style="--status-color: var(--clr-green);">
+                    <div class="status-header">
+                        <span class="status-phase">Phase 2</span>
+                        <span class="status-check">&#10003;</span>
+                    </div>
+                    <h4 data-i18n="phase2">AI 도구 라이브러리</h4>
+                    <div class="status-bar"><div class="status-fill" style="width: 100%;"></div></div>
+                    <div class="status-meta">
+                        <span>29 files</span>
+                        <span>~16,600 LOC</span>
+                    </div>
+                </div>
+                <div class="status-card fade-in" style="--status-color: var(--clr-pink);">
+                    <div class="status-header">
+                        <span class="status-phase">Phase 3</span>
+                        <span class="status-check">&#10003;</span>
+                    </div>
+                    <h4 data-i18n="phase3">API 백엔드</h4>
+                    <div class="status-bar"><div class="status-fill" style="width: 100%;"></div></div>
+                    <div class="status-meta">
+                        <span>32 files</span>
+                        <span>~5,000 LOC</span>
+                    </div>
+                </div>
+                <div class="status-card fade-in" style="--status-color: var(--clr-amber);">
+                    <div class="status-header">
+                        <span class="status-phase">Phase 4</span>
+                        <span class="status-check">&#10003;</span>
+                    </div>
+                    <h4 data-i18n="phase4">프론트엔드</h4>
+                    <div class="status-bar"><div class="status-fill" style="width: 100%;"></div></div>
+                    <div class="status-meta">
+                        <span>34+ files</span>
+                        <span>~10,100 LOC</span>
+                    </div>
+                </div>
+                <div class="status-card fade-in" style="--status-color: var(--clr-cyan);">
+                    <div class="status-header">
+                        <span class="status-phase">Phase 5</span>
+                        <span class="status-check">&#10003;</span>
+                    </div>
+                    <h4 data-i18n="phase5">고급 기능</h4>
+                    <div class="status-bar"><div class="status-fill" style="width: 100%;"></div></div>
+                    <div class="status-meta">
+                        <span>18 files</span>
+                        <span>~3,850 LOC</span>
+                    </div>
+                </div>
+                <div class="status-card fade-in" style="--status-color: var(--clr-purple);">
+                    <div class="status-header">
+                        <span class="status-phase">Phase 6</span>
+                        <span class="status-check">&#10003;</span>
+                    </div>
+                    <h4 data-i18n="phase6">인프라 & 배포</h4>
+                    <div class="status-bar"><div class="status-fill" style="width: 100%;"></div></div>
+                    <div class="status-meta">
+                        <span>25+ files</span>
+                        <span>~3,000 LOC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Statistics Section -->
+    <section class="section section-alt" id="stats">
+        <div class="container">
+            <h2 class="section-title" data-i18n="stats_title">프로젝트 통계</h2>
+            <p class="section-desc" data-i18n="stats_desc">NEXUS AI 플랫폼의 핵심 수치</p>
+            <div class="stats-grid">
+                <div class="stat-card fade-in">
+                    <div class="stat-card-number" data-count="305">0</div>
+                    <div class="stat-card-label" data-i18n="stat_files">프로덕션 파일</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-card-number" data-count="56000">0</div>
+                    <div class="stat-card-label" data-i18n="stat_total_loc">코드 라인 (LOC)</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-card-number" data-count="32">0</div>
+                    <div class="stat-card-label" data-i18n="stat_routers">API 라우터</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-card-number" data-count="204">0</div>
+                    <div class="stat-card-label" data-i18n="stat_api_endpoints">API 엔드포인트</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-card-number" data-count="10">0</div>
+                    <div class="stat-card-label" data-i18n="stat_fw_adapters">프레임워크 어댑터</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-card-number" data-count="110">0</div>
+                    <div class="stat-card-label" data-i18n="stat_ai_tools">AI 도구</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-card-number" data-count="40">0</div>
+                    <div class="stat-card-label" data-i18n="stat_dashboard">대시보드 페이지</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-card-number" data-count="1594">0</div>
+                    <div class="stat-card-label" data-i18n="stat_i18n_keys">i18n 키 (로케일당)</div>
+                </div>
+            </div>
+            <div class="server-info fade-in">
+                <h4 data-i18n="server_title">서버 구성</h4>
+                <div class="server-grid">
+                    <div class="server-item">
+                        <span class="server-label">Web UI</span>
+                        <code>http://localhost:3000</code>
+                    </div>
+                    <div class="server-item">
+                        <span class="server-label">API Docs</span>
+                        <code>http://localhost:8000/api/docs</code>
+                    </div>
+                    <div class="server-item">
+                        <span class="server-label">API Health</span>
+                        <code>http://localhost:8000/health</code>
+                    </div>
+                    <div class="server-item">
+                        <span class="server-label">MinIO Console</span>
+                        <code>http://localhost:9001</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Version History Section -->
+    <section class="section" id="versions">
+        <div class="container">
+            <h2 class="section-title" data-i18n="ver_title">버전 히스토리</h2>
+            <p class="section-desc" data-i18n="ver_desc">NEXUS AI 플랫폼의 발전 과정</p>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot" style="background: var(--clr-cyan);"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2026-02-17</div>
+                        <h4>v2.1.0 <span class="timeline-tag" data-i18n="ver_latest">최신</span></h4>
+                        <p data-i18n="ver_210">10개 Agentic AI 프레임워크 통합, FrameworkAdapter 패턴, Smart Fallback</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot" style="background: var(--clr-purple);"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2026-02-08</div>
+                        <h4>v2.0.0</h4>
+                        <p data-i18n="ver_200">멀티모달, 협업 에이전트, 플러그인, 분석, 화이트라벨, i18n 완성</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot" style="background: var(--clr-green);"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2026-02-03</div>
+                        <h4>v1.6.0</h4>
+                        <p data-i18n="ver_160">한국 OAuth (카카오/네이버), 음성 인터페이스, Phase 6 인프라 완성</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot" style="background: var(--clr-amber);"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2026-01-29</div>
+                        <h4>v1.5.0</h4>
+                        <p data-i18n="ver_150">Kubernetes 배포, CI/CD 파이프라인, Prometheus + Grafana 모니터링</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot" style="background: var(--clr-pink);"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2026-01-29</div>
+                        <h4>v1.4.0</h4>
+                        <p data-i18n="ver_140">5개 프로덕션 워크스페이스, 110+ 도구 UI, Phase 4 프론트엔드 완성</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><span class="brand-accent">NEXUS</span> AI</h3>
+                    <p data-i18n="footer_desc">Production-grade Multi-Agent Orchestration Platform</p>
+                    <div class="footer-badges">
+                        <span class="badge badge-cyan">v2.1.0</span>
+                        <span class="badge badge-green">MIT License</span>
+                        <span class="badge badge-purple" data-i18n="footer_badge_verified">100% Verified</span>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h5 data-i18n="footer_quicklinks">빠른 링크</h5>
+                    <a href="#architecture" data-i18n="nav_architecture">아키텍처</a>
+                    <a href="#frameworks" data-i18n="nav_frameworks">프레임워크</a>
+                    <a href="#tools" data-i18n="nav_tools">AI 도구</a>
+                    <a href="#features" data-i18n="nav_features">기능</a>
+                    <a href="#stats" data-i18n="nav_stats">통계</a>
+                </div>
+                <div class="footer-tech">
+                    <h5 data-i18n="footer_techstack">기술 스택</h5>
+                    <span>Next.js 14 + TypeScript</span>
+                    <span>FastAPI + Python 3.11</span>
+                    <span>PostgreSQL + pgvector</span>
+                    <span>Docker + Kubernetes</span>
+                    <span>10 AI Frameworks</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Built with &#10084; by the NEXUS AI Team</p>
+                <p>Last Updated: 2026-02-17 | Version: 2.1.0 | Editor: Brian Lee</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
